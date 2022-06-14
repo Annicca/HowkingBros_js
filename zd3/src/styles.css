@@ -1,0 +1,68 @@
+body {
+  font-family: sans-serif;
+}
+.button {
+  display: inline-block;
+  width: 72px; /* ширина */
+  height: 38px; /* высота */
+  border-radius: 19px;
+  background: linear-gradient(
+    to right,
+    #7f7f7f 0,
+    #bfbfbf 40%,
+    rgb(216, 187, 226) 60%,
+    rgb(174, 20, 225) 100%
+  );
+  background-size: 180px 100%;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 300ms; /* анимация */
+}
+.button::after {
+  content: "";
+  height: 32px; /* высота кнопки */
+  width: 32px; /* ширина кнопки */
+  border-radius: 17px;
+  background: #fff; /* цвет кнопки */
+  top: 3px; /* положение кнопки по вертикали относительно основы */
+  left: 3px; /* положение кнопки по горизонтали относительно основы */
+  transition-duration: 300ms; /* анимация */
+  position: absolute;
+  z-index: 1;
+}
+.button-on {
+  background-position-x: -100px;
+}
+.button-on::after {
+  left: 37px;
+}
+#app-button {
+  width: 30%;
+  height: 200px;
+  background-color: rgb(173, 83, 202);
+  border-radius: 20px;
+}
+#but {
+  top: 40%;
+  left: 40%;
+}
+.app {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  height: 200px;
+}
+#child,
+#child_left {
+  background-color: rgb(217, 155, 238);
+  height: 200px;
+  width: 30%;
+  margin: 2%;
+  border-radius: 20px;
+}
